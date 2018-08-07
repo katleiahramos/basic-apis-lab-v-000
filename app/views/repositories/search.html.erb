@@ -11,8 +11,8 @@
 
 
    <% @repos.each do |repo| %>
-      <%= repo['name'] %>
-      <%= link_to result["html_url"], result["hotml_url"] %>
+      <%= repo['name'] %><br>
+      <%= link_to result["html_url"], result["hotml_url"] %><br>
 
       <%= repo['description'] %></li>
    <% end  %>
