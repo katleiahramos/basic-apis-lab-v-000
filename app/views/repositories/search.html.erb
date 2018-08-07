@@ -6,8 +6,16 @@
 <% end %>
 
 <div class="">
+  <% if @repos %>
+  <ul>
 
-<%= @repos.each do |repo| %>
-  <% binding.pry %>
-<% end  %>
+
+   <% @repos.each do |repo| %>
+      <li><a href="<%= repo['html_url'] %>"><%= repo['name'] %></a><br>
+
+      <%= repo['description'] %></li>
+   <% end  %>
+ </ul>
+ <% end %>
+
 </div>
